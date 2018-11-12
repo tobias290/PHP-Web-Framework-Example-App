@@ -6,26 +6,26 @@ Example of a basic project using my PHP Web App Framework.
 ### Folder Structure 
 
 * __Base folder__: Generally the name of the application is the name of the base folder
-    * [__Application__](#Application): Main folder for classes related to the application 
+    * [__Application__](#app): Main folder for classes related to the application 
         * [__Application.php__](#app-app): Main application class where all database tables, controllers, forms and middleware are registers so they can be used
-        * [__Commands__](#Application/Commands): All commands are stored here
-        * [__Controllers__](#Application/Controllers): All controllers (each controls a single/multiple web pages) will be located here
-        * [__Forms__](#Application/Forms): All form classes will be located here
-        * [__Middleware__](#Application/Middleware): All middleware classes will be located here
-        * [__Tables__](#Application/Tables): All database table classes will be located here
-    * [__Framework__](Framework): The framework source code
-    * [__public__](#~/public): public resources such as css, images, javascript will be located here
-    * [__routes__](#~/routes): All route files will be stored here. Route files are used to define the routes that are typed into the URL to load certain controllers/views
-    * [__views__](#~/views): All html files will be located here
+        * [__Commands__](#app-commands): All commands are stored here
+        * [__Controllers__](#app-controllers): All controllers (each controls a single/multiple web pages) will be located here
+        * [__Forms__](#app-forms): All form classes will be located here
+        * [__Middleware__](#app-middleware): All middleware classes will be located here
+        * [__Tables__](#app-tables): All database table classes will be located here
+    * [__Framework__](https://github.com/tobias290/PHP-Web-Framework): The framework source code
+    * [__public__](#public): public resources such as css, images, javascript will be located here
+    * [__routes__](#routes): All route files will be stored here. Route files are used to define the routes that are typed into the URL to load certain controllers/views
+    * [__views__](#views): All html files will be located here
     * __app__: Main file which is called in the console to do various commands
-    * [__config.ini__](#~/config.ini): ALl config relating to the app are located in this ini file. E.g. Application config, Database information
+    * [__config.ini__](#config.ini): ALl config relating to the app are located in this ini file. E.g. Application config, Database information
     * __index.php__: Index page
     * __README.md__: Readme file with instruction on how to use the framework
     * __server.php__: Server scripts called when the server is loaded up
 
 # Basic Set Up and Use
 
-## Application
+## <a name="app">Application</a>
 
 ### <a name="app-app">Application/Application.php</a>
 
@@ -78,7 +78,7 @@ This class is used to register all classes used by the application:
 
 #
 
-### Application/Commands
+### <a name="app-commands">Application/Commands</a>
 
 This directory holds all commands. 
 
@@ -150,9 +150,9 @@ Example user defined command to show they work
 
 #
 
-### Application/Controllers
+### <a name="app-controllers">Application/Controllers</a>
 
-This directory holds all controllers. 
+This directory holds all controllers.
 
 A controller is a class with a bunch of methods of which all relate to either one or multiple urls.
 When that URL is called the method related to url is called. 
@@ -272,7 +272,7 @@ API controller is used to return content is a way a API would. The content can e
 
 #
 
-### Application/Forms
+### <a name="app-forms">Application/Forms</a>
 
 This directory holds all forms. 
 
@@ -356,7 +356,7 @@ The form has two protected variables `$model` must be defined whereas `$fields` 
 
 #
 
-### Application/Middleware
+### <a name="app-middleare">Application/Middleware</a>
 
 This directory holds all middleware. 
 
@@ -386,7 +386,7 @@ The `return $next()` will call the next middleware layer in the queue. If there 
 
 #
 
-### Application/Tables
+### <a name="app-tables">Application/Tables</a>
 
 This directory holds all tables. 
 
@@ -507,11 +507,11 @@ class Test extends Table {
 }
 ```
 
-## ~/public
+## <a name="public">~/public</a>
 
 The public directory is for all files that will be publicly available such as CSS files, JavaScript files and images. 
 
-## ~/routes
+## <a name="routes">~/routes</a>
 
 The routes directory is where all route files will go. Route files are where the routes are defines and URLs are linked to controllers.
 
@@ -555,13 +555,13 @@ Common router methods:
 * `get`: Matches only the GET request method
 * `group`: Any routes defines within the group will gave the given middleware applied to them
 
-## ~/views
+## <a name="views">~/views</a>
 
 All views are stored here.
 
 #
 
-## ~/config.ini
+## <a name="config">~/config.ini</a>
 
 ```ini
 [app]
@@ -599,7 +599,7 @@ engine = mysql
 host = localhost
 user = root
 password = admin1234
-database = admin_database
+database = php_framework_test
 ```
 
 All information required to use the database is stored here. If a database if not being used then this section is not required.
@@ -619,7 +619,7 @@ All information required to use the database is stored here. If a database if no
 [mail]
 host = smtp.mailhost.com
 username = example@mail.com
-password = pass1234
+password = companyname
 encryption = tls
 ```
 
