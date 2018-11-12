@@ -7,7 +7,7 @@ Example of a basic project using my PHP Web App Framework.
 
 * __Base folder__: Generally the name of the application is the name of the base folder
     * [__Application__](#Application): Main folder for classes related to the application 
-        * [__Application.php__](#Application/Application.php): Main application class where all database tables, controllers, forms and middleware are registers so they can be used
+        * [__Application.php__](#app-app): Main application class where all database tables, controllers, forms and middleware are registers so they can be used
         * [__Commands__](#Application/Commands): All commands are stored here
         * [__Controllers__](#Application/Controllers): All controllers (each controls a single/multiple web pages) will be located here
         * [__Forms__](#Application/Forms): All form classes will be located here
@@ -27,7 +27,7 @@ Example of a basic project using my PHP Web App Framework.
 
 ## Application
 
-### Application/Application.php
+### <a name="app-app">Application/Application.php</a>
 
 ```php
 <?php
