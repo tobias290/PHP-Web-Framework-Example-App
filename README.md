@@ -18,7 +18,7 @@ Example of a basic project using my PHP Web App Framework.
     * [__routes__](#routes): All route files will be stored here. Route files are used to define the routes that are typed into the URL to load certain controllers/views
     * [__views__](#views): All html files will be located here
     * __app__: Main file which is called in the console to do various commands
-    * [__config.ini__](#config.ini): ALl config relating to the app are located in this ini file. E.g. Application config, Database information
+    * [__config.ini__](#config): ALl config relating to the app are located in this ini file. E.g. Application config, Database information
     * __index.php__: Index page
     * __README.md__: Readme file with instruction on how to use the framework
     * __server.php__: Server scripts called when the server is loaded up
@@ -356,7 +356,7 @@ The form has two protected variables `$model` must be defined whereas `$fields` 
 
 #
 
-### <a name="app-middleare">Application/Middleware</a>
+### <a name="app-middleware">Application/Middleware</a>
 
 This directory holds all middleware. 
 
