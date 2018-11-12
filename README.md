@@ -588,7 +588,7 @@ engine = php
 This section tells the application what template engine to use.
 
 * `engine`:
-    * __framework_template_language__: Used the web frameworks own template engine
+    * __framework_template_language__: Used the web frameworks own template engine. Check [here](https://github.com/tobias290/PHP-Web-Framework/tree/master/TemplateEngine)
     * __php__: Used PHP's syntax 
     
 ##
